@@ -1,11 +1,26 @@
 import React from "react";
 
+import {
+  BrowserRouter,
+  Switch,
+  Route,
+} from "react-router-dom/cjs/react-router-dom.min";
+
+import Anasayfa from "./components/Anasayfa/Anasayfa";
+import Form from "./components/Form/Form";
+
 const App = () => {
   return (
-    <>
-      <h1>Teknolojik Yemekler</h1>
-      <p>Burdaki kodu silip kendi headerınızı ekleyebilirsiniz</p>
-    </>
+    <BrowserRouter>
+      <Switch>
+        <Route path="/" exact>
+          <Anasayfa />
+        </Route>
+        <Route path="/Form" exact>
+          <Form />
+        </Route>
+      </Switch>
+    </BrowserRouter>
   );
 };
 export default App;
