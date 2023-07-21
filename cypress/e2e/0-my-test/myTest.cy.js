@@ -17,6 +17,9 @@ describe("My test", () => {
     cy.get('[data-cy="radio-btn"] input').should("have.length", 2);
     cy.get('[data-cy="malzeme"] input').should("have.length", 14);
 
+    cy.get('[data-cy="name-text"] ').type(isim);
+    cy.get('[data-cy="submit-btn"]').should("not.have.disabled");
+
     cy.get('[data-cy="submit-btn"] ').click();
   });
 });

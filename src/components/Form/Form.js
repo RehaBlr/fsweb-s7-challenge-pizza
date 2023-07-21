@@ -46,7 +46,7 @@ const Form = () => {
   const [formData, setFormData] = useState({
     sizeDropdown: "small",
     ekMalzemeler: [],
-    adres: "isim yaz",
+    adres: "",
     siparisNotu: "",
     kacTane: 1,
     fiyat: 85.5,
